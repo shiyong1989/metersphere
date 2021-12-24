@@ -1,0 +1,18 @@
+apiVersion: v1
+appVersion: 1.13.0
+description: A Helm chart to deploy MeterSphere
+engine: gotpl
+home: https://metersphere.io
+icon: https://metersphere.io/images/logo/favicon.ico
+maintainers:
+- email: metersphere@fit2cloud.com
+  name: metersphere
+name: metersphere
+sources:
+- https://github.com/metersphere/
+dependencies:
+- name: kafka
+  repository: https://charts.bitnami.com/bitnami
+  condition: kafka.enabled
+  version: 14.2.0
+version: 1.0.6
